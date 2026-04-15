@@ -535,6 +535,7 @@ app.post("/fetch", ensureAuth, async (req, res) => {
         rawItemCount: rawItems.length,
         normalizedCount: normalizedActivities.length,
         aggregateObservedMode: aggregateObserved?.mode || null,
+        firstRawItemPreview: rawItems[0] || null,
       },
     });
   } catch (error) {
